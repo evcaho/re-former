@@ -1,11 +1,11 @@
+
 <ul>
   <% @user.errors.full_messages.each do |error| %>
   <li><%= error %></li>
   <% end %>
 </ul>
-
 <h1>A practice form!</h1>
-<%= form_for @user do |f| %> 
+<%= form_for(@user, url: user_path(@user), html: {method: "patch"}) do |f| %> 
 	<p> 
 		<%= f.label :username %><br>
 		<%= f.text_field :username%>
@@ -33,3 +33,4 @@
   	Password: <input type="text" name="user[password]"><br>
     <input type="submit" value="Submit This Form">
 </form> -->
+
