@@ -8,15 +8,15 @@
 <%= form_for @user do |f| %> 
 	<p> 
 		<%= f.label :username %><br>
-		<%= f.text_field :username %>
+		<%= f.text_field :username%>
 	</p>
 	<p>
 		<%= f.label :email %><br>
-		<%= f.text_field :email %>
+		<%= f.text_field :email, placeholder: "example@awesome.com" %>
 	</p>
 	<p>
 		<%= f.label :password %><br>
-		<%= f.text_field :password %>
+		<%= f.password_field :password %>
 	</p>
 <p>
 	<%= f.submit%>
